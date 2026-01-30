@@ -7,12 +7,14 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #87ceeb, #f0f8ff); /* sky gradient */
+  background: linear-gradient(to bottom, #87ceeb, #f0f8ff); /* default sky gradient */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  transition: background 1s ease; /* smooth background change */
 }
+
 
 .weather-container {
   background: rgba(255, 255, 255, 0.95);
@@ -66,3 +68,5 @@ button:hover {
     width: 90%;
   }
 }
+
+
