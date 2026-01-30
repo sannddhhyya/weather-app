@@ -1,12 +1,13 @@
-# South Africa Weather App
+# South Africa Weather Dashboard
 
-A beginner-friendly weather app built with **HTML, CSS, and JavaScript** using the **OpenWeatherMap API**.
+A beginner-friendly weather dashboard built with HTML, CSS, and JavaScript using the OpenWeatherMap API.
 
 ## Features
-- Dropdown for South African cities to avoid errors
-- Shows temperature, weather description, humidity, and weather icon
-- Dynamic background changes based on weather
-- Mobile responsive design
+- Select a South African city from dropdown
+- Displays current weather (temperature, description, humidity, wind)
+- 5-day forecast with weather icons
+- Dynamic background based on current weather
+- Mobile-friendly and responsive
 
 ## Technologies
 - HTML, CSS, JavaScript
@@ -17,4 +18,5 @@ A beginner-friendly weather app built with **HTML, CSS, and JavaScript** using t
 2. Replace `YOUR_API_KEY` in `script.js` with your key
 3. Open `index.html` in your browser
 4. Select a city and click "Get Weather"
+
 
