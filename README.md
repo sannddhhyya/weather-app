@@ -1,20 +1,20 @@
-# Weather App
+# South Africa Weather App
 
-A simple weather app built with **HTML, CSS, and JavaScript** using the **OpenWeatherMap API**.
+A beginner-friendly weather app built with **HTML, CSS, and JavaScript** using the **OpenWeatherMap API**.
 
 ## Features
-- Enter any city to get real-time weather
-- Shows temperature, weather condition, humidity, and icon
+- Dropdown for South African cities to avoid errors
+- Shows temperature, weather description, humidity, and weather icon
+- Dynamic background changes based on weather
 - Mobile responsive design
 
 ## Technologies
 - HTML, CSS, JavaScript
 - OpenWeatherMap API
 
-## Live Demo
-[Add your GitHub Pages or CodePen link here]
-
 ## Usage
-1. Clone or download the repository
-2. Open `index.html` in your browser
-3. Enter a city and click "Get Weather"
+1. Get a free OpenWeatherMap API key
+2. Replace `YOUR_API_KEY` in `script.js` with your key
+3. Open `index.html` in your browser
+4. Select a city and click "Get Weather"
+
