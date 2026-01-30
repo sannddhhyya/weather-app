@@ -5,33 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SA Weather Dashboard</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Background with animated elements -->
+  <div class="background-animation">
+    <div class="sun"></div>
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+  </div>
+  
   <div class="dashboard-container">
-    <h1>South Africa Weather Dashboard</h1>
-    
-    <!-- City selector -->
-    <select id="city-input">
-      <option value="Johannesburg">Johannesburg</option>
-      <option value="Cape Town">Cape Town</option>
-      <option value="Durban">Durban</option>
-      <option value="Pretoria">Pretoria</option>
-      <option value="Port Elizabeth">Port Elizabeth</option>
-      <option value="Bloemfontein">Bloemfontein</option>
-      <option value="Nelspruit">Nelspruit</option>
-      <option value="East London">East London</option>
-    </select>
-    
-    <button id="get-weather">Get Weather</button>
+    <!-- Header with South African flag colors -->
+    <header class="dashboard-header">
+      <div class="header-content">
+        <div class="flag-stripes">
+          <div class="stripe green"></div>
+          <div class="stripe white"></div>
+          <div class="stripe red"></div>
+          <div class="stripe blue"></div>
+          <div class="stripe yellow"></div>
+          <div class="stripe black"></div>
+        </div>
+        <h1><i class="fas fa-flag"></i> South Africa Weather Dashboard</h1>
+        <p class="subtitle">Real-time weather across the Rainbow Nation</p>
+      </div>
+    </header>
 
-    <!-- Current weather -->
-    <div id="current-weather" class="weather-panel"></div>
+    <main class="dashboard-main">
+      <!-- City Selection Card -->
+      <div class="card selection-card">
+        <div class="card-header">
+          <i class="fas fa-map-marker-alt"></i>
+          <h2>Select City</h2>
+        </div>
+        <div class="card-body">
+          <div class="city-selector-container">
+            <div class="select-wrapper">
+              <select id="city-input">
+                <option value="Johannesburg"><i class="fas fa-city"></i> Johannesburg</option>
+                <option value="Cape Town"><i class="fas fa-mountain"></i> Cape Town</option>
+                <option value="Durban"><i class="fas fa-umbrella-beach"></i> Durban</option>
+                <option value="Pretoria"><i class="fas fa-landmark"></i> Pretoria</option>
+                <option value="Port Elizabeth"><i class="fas fa-ship"></i> Port Elizabeth</option>
+                <option value="Bloemfontein"><i class="fas fa-flag"></i> Bloemfontein</option>
+                <option value="Nelspruit"><i class="fas fa-tree"></i> Nelspruit</option>
+                <option value="East London"><i class="fas fa-water"></i> East London</option>
+              </select>
+              <i class="fas fa-chevron-down select-icon"></i>
+            </div>
+            
+            <button id="get-weather" class="weather-btn">
+              <i class="fas fa-cloud-sun"></i> Get Weather Report
+            </button>
+            
+            <div class="api-status">
+              <i class="fas fa-satellite-dish"></i>
+              <span>Live data from OpenWeatherMap</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <!-- 5-day forecast -->
-    <div id="forecast" class="forecast-container"></div>
+      <!-- Current Weather Card -->
+      <div id="current-weather" class="card weather-card current-weather">
+        <div class="card-header">
+          <i class="fas fa-sun"></i>
+          <h2>Current Weather</h2>
+        </div>
+        <div class="card-body">
+          <div class="loading-state">
+            <i class="fas fa-cloud-sun fa-spin"></i>
+            <p>Select a city and click "Get Weather Report"</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5-Day Forecast Card -->
+      <div id="forecast" class="card weather-card forecast-card">
+        <div class="card-header">
+          <i class="fas fa-calendar-alt"></i>
+          <h2>5-Day Forecast</h2>
+        </div>
+        <div class="card-body">
+          <div class="forecast-placeholder">
+            <i class="fas fa-chart-line"></i>
+            <p>5-day forecast will appear here</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+      <p><i class="fas fa-info-circle"></i> Data updates every 10 minutes • OpenWeatherMap API</p>
+      <p class="footer-note"><i class="fas fa-heart"></i> Proudly South African</p>
+    </footer>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
